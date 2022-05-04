@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+:root {
+    --oswald-font: 'Oswald', sans-serif;
+    --roboto-font: 'Roboto', sans-serif;
+    --roboto-condensed-font: 'Roboto Condensed', sans-serif;
+    --gray-background: #D6D6D6; 
+    --description-color: rgb(85, 85, 85);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+h2 {
+    font-family: var(--roboto-font);
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+h3, h4, h5 {
+    font-family: var(--roboto-condensed-font);
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 2.25rem;
+}
+
+h5 {
+    font-size: 1.75rem;
+}
+
+#content {
+     display: grid;
+     grid-template-columns: 300px 1fr;
+     grid-template-areas: "sidebar mainscreen";
+}
+
+
+/* for sidebar */
+
+#sidebar {
+    grid-area: sidebar;
+    height: 100vh;
+    background-color: var(--gray-background);
+    display: flex;
+    flex-direction: column;
+    color: black;
+}
+
+.header-text{
+    font-family: var(--oswald-font);
+    font-size: 5rem;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    margin-top: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.first-half-logo{
+    text-transform: uppercase;
+    color: black;
+    text-decoration: underline;
+}
+
+.second-half-logo{
+    text-transform: uppercase;
+    color: white;
+    text-decoration: underline;
+}
+
+.sidebar-subheader a {
+    display: block;
+    text-decoration: none;
+    font-size: 3rem;
+    background-color: var(--gray-background);
+    color: black;
+    font-weight: 400;
+    border: none;
+    font-family: var(--roboto-condensed-font);
+}
+
+/* for main menu */
+
+#mainmenu {
+    margin-left: 5rem;
+    margin-right: 20rem;
+}
+
+/*for the form to insert task and subtask*/
+/* 
+#insert-task {
+    border: 1px solid black;
+}
+
+#insert-task input, #insert-task select {
+    display: block;
+    font-family: var(--roboto-condensed-font);
+    font-size: 2rem;
+}
+
+#insert-task input {
+    margin-top: 1rem;
+}
+
+.form-header {
+    margin-top: 1rem;
+}
+
+#insert-title, #insert-description {
+    width: 92.5%;
+    margin: 0 auto;
+}
+
+#insert-priority {
+    margin: 0;
+    text-align: center;
+    width: 10rem;
+    color: gray;
+}
+
+#flex-column-insert {
+    display: flex;
+    flex-direction: column;
+}
+
+#flex-row-insert {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+    height: 2rem;
+    margin-bottom: 1rem;
+    width: 92.5%;
+    margin: 0 auto;
+}
+
+#flex-row-insert button {
+    height: 3rem;
+}
+
+#submit-insert {
+    flex-direction: row;
+}
+
+.task {
+    font-family: var(--roboto-condensed-font);
+}
+
+.subtask {
+    font-family: var(--roboto-condensed-font);
+}
+
+#work-header {
+    display: flex;
+    flex-direction: row;
+} */
+
+
+/* for icon btns */
+
+.icon-btn-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.icon-btn {
+    border: none;
+    border-radius: 50%;
+    padding: 0;
+    background-color: transparent;
+    align-self: center;
+    margin-left: 0.5em;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+/*for h2 icon buttons*/
+
+.header-icon-btn, .header-icon-btn img {
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+/*for h3 icon buttons*/
+
+.subheader-icon-btn, .subheader-icon-btn img {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+/*for h5 icon buttons*/
+.undersubheader-icon-btn, .undersubheader-icon-btn img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* for the actual tasks */
+.description {
+    color: var(--description-color);
+}
+
+.priority-img {
+    align-self: start;
+}
+
+/*use calc for these later instead so that one value doesn't change the others */
+.checkbox {
+    margin-right: 0.5rem;
+    margin-left: 0rem;
+}
+
+.main-task > .task-name {
+    margin-left: 2rem;
+}
+
+.main-task > .description, .sub-task-name {
+    margin-left: 5rem;
+}
+
+.sub-task-name {
+    margin-top: 0.25rem;
+}
+
+.sub-task .description {
+    margin-left: 7rem;
+}
+
+
+
