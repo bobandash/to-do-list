@@ -20,13 +20,13 @@
             </div>
             <div class = "projects-nav">
                 <h2 class = "sidebar-main-header">Projects</h2>
-                <h3 class =  "icon-btn-container sidebar-subheader"><a href = ""><button class = "icon-btn subheader-icon-btn"><img src = "/src/assets/plus-circle.svg"></button>Add Projects</a></h3>
+                <h3 class =  "icon-btn-container sidebar-subheader"><a href = ""><button class = "icon-btn subheader-icon-btn icon-adj-text"><img src = "/src/assets/plus-circle.svg"></button>Add Projects</a></h3>
             </div>
         </div>
         <div id = "mainmenu">
             <h1 class ="header-text">Today</h1>
             <section id = "work-tasks">
-                <h2 class = "icon-btn-container" id = "work-header">Work<button class = "icon-btn header-icon-btn" id = "add-work-task"><img src = "/src/assets/plus-circle.svg"></button></h2>
+                <h2 class = "icon-btn-container" id = "work-header">Work<button class = "icon-btn header-icon-btn icon-adj-text" id = "add-work-task"><img src = "/src/assets/plus-circle.svg"></button></h2>
 
                 <!-- form that pops up when click the + icon -->
 <!--                 <form id = "insert-task">
@@ -49,22 +49,87 @@
 <!--                 example of task -->
                 <section class = "task">
                     <div class = "main-task">
-                        <h3 class = "task-name icon-btn-container"><button class = "icon-btn subheader-icon-btn checkbox"><img src = "/src/assets/checkbox.svg"></img></button><img class = "priority-img priority-subheader-img" src = "/src/assets/priority-1.svg">Create VBA Macro For Item List</h3>
-                        <h4 class = "description">Description of the thingy</h4>
-                    </div>
-                    <section class = "sub-task">
-                        <div>
-                            <h4 class = "sub-task-name icon-btn-container"><button class = "icon-btn undersubheader-icon-btn checkbox"><img src = "/src/assets/checkbox.svg"></button>Some random text here</h4>
-                            <h5 class = "description">Description of thingy again</h5>
-                            <!-- make sure you set margin right to accomadate the same space as the buttons -->
+                        <div class = "icon-btn-container checkbox-container">
+                            <button class = "icon-btn checkbox subheader-icon-btn"><img src = "/src/assets/checkbox.svg"></button>
+                            <img class = "priority-img priority-subheader-img" src = "/src/assets/priority-1.svg">
                         </div>
+                        <div class = "task-name">
+                            <h3>Create VBA Macro For Item List</h3>
+                        </div>
+                        <div class = "task-hover-icons">
+                            <button class = "icon-btn add-subtask-icon subheader-icon-btn"><img src = "/src/assets/plus-circle.svg"></button>
+                            <button class = "icon-btn edit-task-icon subheader-icon-btn"><img src = "/src/assets/edit.svg"></button>
+                            <button class = "icon-btn delete-task-icon subheader-icon-btn"><img src = "/src/assets/delete.svg"></button>
+                        </div>
+                    </div>
+                    <div class = "main-task-description description">
+                        <h4>Description of the thingy</h4>
+                    </div>
 
-                    </section>
+                    <div class = "subtask">
+                        <div class = "subtask-checkbox checkbox-container">
+                            <button class = "icon-btn checkbox undersubheader-icon-btn"><img src = "/src/assets/checkbox.svg"></button></button>
+                        </div>
+                        <div class = "subtask-name">
+                            <h4>Do something amazing</h4>
+                        </div>
+                        <div class = "subtask-hover-icons">
+                            <button class = "icon-btn add-subtask-icon undersubheader-icon-btn"><img src = "/src/assets/plus-circle.svg"></button>
+                            <button class = "icon-btn edit-task-icon undersubheader-icon-btn"><img src = "/src/assets/edit.svg"></button>
+                            <button class = "icon-btn delete-task-icon undersubheader-icon-btn"><img src = "/src/assets/delete.svg"></button>
+                        </div>
+                    </div>
+                    <div class = "subtask-description description">
+                        <h5>Description of thingy again</h5>
+                    </div>
+
                 </section>
             </section>
 
             <section id = "project-tasks">
-                <h2 class = "icon-btn-container">Projects<button class = "icon-btn header-icon-btn" id = "add-project-task"><img src = "/src/assets/plus-circle.svg"></button></h2>
+                <h2 class = "icon-btn-container">Projects<button class = "icon-btn header-icon-btn icon-adj-text" id = "add-project"><img src = "/src/assets/plus-circle.svg"></button></h2>
+                <div id = "golddoof-youtube">
+                    <h2 class = "icon-btn-container project-name">
+                        GoldDoof Youtube
+                        <button class = "icon-btn header-icon-btn icon-adj-text" id = "add-golddoof-youtube-task"><img src = "/src/assets/plus-circle.svg"></button>
+                    </h2>
+                    <section class = "task">
+                        <div class = "main-task">
+                            <div class = "icon-btn-container checkbox-container">
+                                <button class = "icon-btn checkbox subheader-icon-btn"><img src = "/src/assets/checkbox.svg"></button>
+                                <img class = "priority-img priority-subheader-img" src = "/src/assets/priority-1.svg">
+                            </div>
+                            <div class = "task-name">
+                                <h3>Create VBA Macro For Item List</h3>
+                            </div>
+                            <div class = "task-hover-icons">
+                                <button class = "icon-btn add-subtask-icon subheader-icon-btn"><img src = "/src/assets/plus-circle.svg"></button>
+                                <button class = "icon-btn edit-task-icon subheader-icon-btn"><img src = "/src/assets/edit.svg"></button>
+                                <button class = "icon-btn delete-task-icon subheader-icon-btn"><img src = "/src/assets/delete.svg"></button>
+                            </div>
+                        </div>
+                        <div class = "main-task-description description">
+                            <h4>Description of the thingy</h4>
+                        </div>
+    
+                        <div class = "subtask">
+                            <div class = "subtask-checkbox checkbox-container">
+                                <button class = "icon-btn checkbox undersubheader-icon-btn"><img src = "/src/assets/checkbox.svg"></button></button>
+                            </div>
+                            <div class = "subtask-name">
+                                <h4>Do something amazing</h4>
+                            </div>
+                            <div class = "subtask-hover-icons">
+                                <button class = "icon-btn add-subtask-icon undersubheader-icon-btn"><img src = "/src/assets/plus-circle.svg"></button>
+                                <button class = "icon-btn edit-task-icon undersubheader-icon-btn"><img src = "/src/assets/edit.svg"></button>
+                                <button class = "icon-btn delete-task-icon undersubheader-icon-btn"><img src = "/src/assets/delete.svg"></button>
+                            </div>
+                        </div>
+                        <div class = "subtask-description description">
+                            <h5>Description of thingy again</h5>
+                        </div>
+
+                </div>
             </section>
         </div>
     </div>

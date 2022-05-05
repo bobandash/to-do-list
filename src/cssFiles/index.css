@@ -7,6 +7,10 @@
     --roboto-condensed-font: 'Roboto Condensed', sans-serif;
     --gray-background: #D6D6D6; 
     --description-color: rgb(85, 85, 85);
+    --h2-font-size: 3.5rem;
+    --h3-font-size: 3rem;
+    --h4-font-size: 2.25rem;
+    --h5-font-size: 1.75rem;
 }
 
 * {
@@ -20,7 +24,7 @@ html {
 
 h2 {
     font-family: var(--roboto-font);
-    font-size: 3.5rem;
+    font-size: var(--h2-font-size);
     font-weight: 700;
     margin-top: 2rem;
     margin-bottom: 0.5rem;
@@ -31,15 +35,15 @@ h3, h4, h5 {
 }
 
 h3 {
-    font-size: 3rem;
+    font-size: var(--h3-font-size);
 }
 
 h4 {
-    font-size: 2.25rem;
+    font-size: var(--h4-font-size);
 }
 
 h5 {
-    font-size: 1.75rem;
+    font-size: var(--h5-font-size);
 }
 
 #content {
@@ -85,7 +89,7 @@ h5 {
 .sidebar-subheader a {
     display: block;
     text-decoration: none;
-    font-size: 3rem;
+    font-size: var(--h3-font-size);
     background-color: var(--gray-background);
     color: black;
     font-weight: 400;
@@ -97,7 +101,8 @@ h5 {
 
 #mainmenu {
     margin-left: 5rem;
-    margin-right: 20rem;
+    /*figure out the proper responsive margin right you want to use */
+    margin-right: max(15rem, 10%);
 }
 
 /*for the form to insert task and subtask*/
@@ -174,6 +179,7 @@ h5 {
 .icon-btn-container {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .icon-btn {
@@ -181,9 +187,13 @@ h5 {
     border-radius: 50%;
     padding: 0;
     background-color: transparent;
-    align-self: center;
     margin-left: 0.5em;
 }
+
+.icon-adj-text {
+    align-self: center;
+}
+
 
 button:hover {
     cursor: pointer;
@@ -192,21 +202,21 @@ button:hover {
 /*for h2 icon buttons*/
 
 .header-icon-btn, .header-icon-btn img {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: var(--h2-font-size);
+    height: var(--h2-font-size);
 }
 
 /*for h3 icon buttons*/
 
 .subheader-icon-btn, .subheader-icon-btn img {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: var(--h3-font-size);
+    height: var(--h3-font-size);
 }
 
 /*for h5 icon buttons*/
 .undersubheader-icon-btn, .undersubheader-icon-btn img {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: var(--h4-font-size);
+    height: var(--h4-font-size);
 }
 
 /* for the actual tasks */
@@ -215,30 +225,58 @@ button:hover {
 }
 
 .priority-img {
-    align-self: start;
+    align-self: top;
+    height: calc(var(--h3-font-size) - 0.5rem);
 }
 
 /*use calc for these later instead so that one value doesn't change the others */
 .checkbox {
     margin-right: 0.5rem;
     margin-left: 0rem;
+    align-self: top;
 }
 
-.main-task > .task-name {
-    margin-left: 2rem;
+
+/*for task formatting */
+.main-task {
+    display: grid;
+    grid-template-columns: 6rem 1fr 20rem;
 }
 
-.main-task > .description, .sub-task-name {
-    margin-left: 5rem;
+.subtask {
+    display: grid;
+    grid-template-columns: 7rem 2rem 1fr 20rem;
 }
 
-.sub-task-name {
-    margin-top: 0.25rem;
+.task-name {
+    margin-left: 1rem;
+    line-height: 3.25rem;
+    overflow-wrap: break-word;
 }
 
-.sub-task .description {
+.main-task-description {
     margin-left: 7rem;
 }
 
+.subtask-checkbox {
+    grid-column-start: 2;
+}
+
+.subtask-name {
+    grid-column-start: 3;
+    margin-left: 1rem;
+}
+
+.subtask-hover-icons {
+    grid-column-start: 4;
+}
+
+.subtask-description {
+    margin-left: 10rem;
+}
 
 
+/* for projects */
+.project-name {
+    margin-top: 1rem;
+}
