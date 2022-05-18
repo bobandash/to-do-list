@@ -7,8 +7,9 @@
     --roboto-font: 'Roboto', sans-serif;
     --roboto-condensed-font: 'Roboto Condensed', sans-serif;
     --merriweather-header-font: 'Merriweather', serif;
-    --sidebar-bcakground: skyblue; 
+    --sidebar-background: skyblue; 
     --description-color: rgb(85, 85, 85);
+    --input-error-color: rgba(211, 211, 211, 0.295);
     --h2-font-size: 3.5rem;
     --h3-font-size: 3rem;
     --h4-font-size: 2.25rem;
@@ -60,7 +61,7 @@ h5 {
 #sidebar {
     grid-area: sidebar;
     height: 100vh;
-    background-color: var(--sidebar-bcakground);
+    background-color: var(--sidebar-background);
     display: flex;
     flex-direction: column;
     color: black;
@@ -92,7 +93,7 @@ h5 {
     display: block;
     text-decoration: none;
     font-size: var(--h3-font-size);
-    background-color: var(--sidebar-bcakground);
+    background-color: var(--sidebar-background);
     color: black;
     font-weight: 400;
     border: none;
@@ -109,7 +110,7 @@ h5 {
 
 /*for the form to insert task*/
 
-#insert-task {
+#main-task-form {
     border: 1px solid black;
     display: flex;
     flex-direction: column;
@@ -129,17 +130,28 @@ h5 {
     flex-direction: row;
 }
 
-#insert-task input, #insert-priority {
+#main-task-form input, #input-priority {
     margin: 0.5rem 1rem;
     padding: 0.25rem 0.5rem;
     font-size: var(--h4-font-size);
 }
 
-#insert-task input::placeholder, #insert-priority {
+#main-task-form .error-message {
+    margin: 0.1rem 1rem;
+    margin-bottom: 0rem;
+    font-size: var(--h5-font-size);
+}
+
+.error-input {
+    border: 2px solid red;
+    background-color: var(--input-error-color);
+}
+
+#main-task-form input::placeholder, #input-priority {
     color: gray;
 }
 
-#insert-priority {
+#input-priority {
     text-align: center;
     margin-bottom: 1rem;
 }
@@ -230,6 +242,10 @@ button:hover {
     overflow-wrap: break-word;
 }
 
+.task {
+    margin-top: 1rem;
+}
+
 .main-task-description {
     margin-left: 7rem;
 }
@@ -260,7 +276,7 @@ button:hover {
 
 /*form to insert subtasks */
 
-#insert-subtask {
+#subtask-form {
     border: 1px solid black;
     display: flex;
     flex-direction: column;
@@ -276,7 +292,7 @@ button:hover {
     margin-left: 1rem;
 }
 
-#insert-subtask input {
+#subtask-form input{
     margin: 0.25rem 1rem;
     padding: 0.25rem 0.3rem;
     font-size: var(--h5-font-size);
@@ -291,6 +307,9 @@ button:hover {
     padding:  0.25rem 0.5rem;
 }
 
+.error-message {
+    color: red;
+}
 
 /* for projects */
 .project-name {
